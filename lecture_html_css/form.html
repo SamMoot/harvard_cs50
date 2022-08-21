@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title> Form: input data </title>
+    </head>
+    <body>
+        <form>
+            <div>
+                <input name="name" type ="text" placeholder="Name">
+                <input name="password" type="password" placeholder="Password">
+            </div>
+            <div>
+                Favorite Color?
+                <input name="color" type="radio" value="red">red
+                <input name="color" type="radio" value="blue">blue
+            </div>
+            <div>
+                Location?
+                <input name="state" list="states" placeholder="State">
+                <datalist id="states">
+                    <option value="California">
+                    <option value="Massachusetts"></option>
+            </div>
+        </form>
+    </body>
+</html>
+<!-- Form: means any page where users can input data
+    -- name attribute -.e.g name = "full_name" for us to be able to reference that input field when we want to perform some operation later. 
+
+    -- submit input to indicate that the user want to submit the form. 
+    -- HTML5
+        * autofilters for lists objects
+-->

@@ -1,0 +1,17 @@
+Specifcity:
+-- take presedence in this order. 
+1. inline <h1 style >
+2. id (style tag - #foo)
+3. class (style tage - .baz)
+4. type (style tage - <h1>)
+
+
+
+CSS Selectors:
+* multiple element selectors: a,b
+* descendant selector: a b
+* child selector : a > b
+* adjacent sibling selector: a + b
+* attribute selector: [a=b]
+* pseudoclass selector: a:b
+* pseudoelement selector: a::b
