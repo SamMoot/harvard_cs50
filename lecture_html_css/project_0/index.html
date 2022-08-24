@@ -2,12 +2,31 @@
 <html lang = "en">
     <head>
         <title>SEARCH</title>
-        <body>
-            <h1>hi</h1>
-            <form action = "https:google.com/search">
-                <input type = "text" name="q">
-                <input type = "submit" value = "Google Search">
-            </form>
-        </body>
+        <link rel="stylesheet" href="style.css">
+        <style> body{margin: 30px;} </style>
     </head>
+    <body>
+        <div class = "alignright">
+            <button type="button" onclick="location.href='image_search.html'">Image Search</button>
+            <button type="button" onclick="location.href='advance_search.html'">Advance Search</button>
+        </div>
+        <div class="alignleft">
+            <button type="button">Login</button>
+            <button type="button">Sign-up</button>
+        </div>
+        <div id="main_search">
+            <h1>
+                <span id = "title_color_G">G</span>
+                <span id = "title_color_O">O</span>
+                <span id = "title_color_O2">O</span>
+                <span id = "title_color_G2">G</span>
+                <span id = "title_color_L">L</span>
+                <span id = "title_color_E">E</span>
+            </h1>
+            <form id = "search_form" action = "https:google.com/search" >
+               <p> <input type = "text" name="q" placeholder="search..." size="60" class="round"> </p>
+                <input type = "submit" value = "Google Search" class="corner">
+            </form>
+        </div>
+    </body>
 </html>
