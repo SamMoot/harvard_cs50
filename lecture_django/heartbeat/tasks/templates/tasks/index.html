@@ -1,0 +1,14 @@
+{% extends "tasks/layout.html" %}
+<!-- template inheritance-->
+{% block body_anyname %}
+    <h1> Tasks for Sam</h1>
+    <ul>
+        {% for task in tasks %}
+        <li> {{task}} </li>
+        <!--  empty tag is when the for loop doesn't run. e.g.here this means no tasks object. -->
+        {% empty %}
+            No tasks yet! 
+        {% endfor %}
+    </ul>
+    <a href="{% url 'tasks:add_2' %}" > Add a New Tasks</a>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "tasks/layout.html" %}
+
+{% block body_anyname %}
+    <h1> Add Task </h1>
+    <form action="{% url 'tasks:add' %}" method = "post" > 
+        <!-- django provides csrf token just by adding this tag-->
+        {% csrf_token %}
+        <input type="text" name="task">
+        <input type="submit">
+    </form>
+    <a href="{% url 'tasks:index' %}"> View Tasks </a>
+{% endblock %}
+
+<!--
+    GET vs POST Methods
+    -- just fetching the data -- use GET. Doesn't change the app. implicit
+    -- getting data that can change the state of the app, use POST.
+            -- post doesnn't include parameters in the url unlike GET does
+CSRF: FORBIDDEN 403 - no permission to do something
+CSRF: cross site request forgery - a security vulnerability on some site where it's not securely built.
+    -- don't want to allow other sites to forge a request
+
+*** we need to create a token - a unique token that's generated. when the user submits the form, this token 
+is sent with it... our app will check for this token before processing. other sites can't forge this token. ***
+
+--- DJANGO has middleware that helps with this. CSRF validation feature is included. so we know that the post
+request actually came from the app. ---
+
+-->
